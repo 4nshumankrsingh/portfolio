@@ -2,7 +2,7 @@
 
 import { CustomCard } from "@/components/CustomCard"
 import { SectionHeader } from "@/components/SectionHeader"
-import { Code2, Database, Server, Cpu, GraduationCap } from "lucide-react"
+import { Code2, Database, Server, GraduationCap } from "lucide-react"
 import { motion } from "framer-motion"
 
 const overviewCards = [
@@ -21,7 +21,7 @@ const overviewCards = [
     icon: Server,
     stats: [
       { label: "Primary Skills", value: "Node.js, Express" },
-      { label: "Other Skills", value: "Prisma, NestJS" },
+      { label: "Other Skills", value: "Prisma, Socket.io" },
     ],
   },
   {
@@ -34,17 +34,8 @@ const overviewCards = [
     ],
   },
   {
-    title: "DevOps Fundamentals",
-    description: "Implementing containerization, learning CI/CD pipelines, and server management to ensure smooth deployment and operation.",
-    icon: Cpu,
-    stats: [
-      { label: "Technologies", value: "Docker, Git" },
-      { label: "Systems", value: "Linux" },
-    ],
-  },
-  {
     title: "Education & Projects",
-    description: "Pursuing BTech with relevant coursework while gaining practical experience through indie and internship projects.",
+    description: "Pursuing BTech with relevant coursework while gaining practical experience through indie projects.",
     icon: GraduationCap,
     stats: [
       { label: "Degree", value: "BTech" },
@@ -56,13 +47,13 @@ const overviewCards = [
 export function OverviewSection() {
   return (
     <div className="py-20 lg:py-28 bg-gray-950/50">
-      <div className="container">
+      <div className="container mx-auto px-4 max-w-6xl">
         <SectionHeader
           eyebrow="What I Do"
           title="Full-Stack Engineering"
           description="Specialized in building end-to-end web applications with a focus on clean code, performance, and user experience."
         />
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {overviewCards.map((card, index) => (
             <motion.div
               key={card.title}

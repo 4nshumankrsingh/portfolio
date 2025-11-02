@@ -87,10 +87,7 @@ const ParticlesCanvas = () => {
 
 const GlowBadge = ({ children }) => (
   <div 
-    className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-6"
-    style={{
-      animation: "float 6s ease-in-out infinite",
-    }}
+    className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-6 animate-float"
   >
     {children}
   </div>
@@ -123,14 +120,7 @@ const ContactSection = () => {
                 </GlowBadge>
                 
                 <h2 
-                  className="text-4xl md:text-5xl font-bold"
-                  style={{
-                    background: "linear-gradient(to right, #f97316, #ea580c)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundSize: "200% 100%",
-                    animation: "gradientMove 15s ease infinite",
-                  }}
+                  className="text-4xl md:text-5xl font-bold bg-gradient-move"
                 >
                   Let's Build Something Amazing Together
                 </h2>
@@ -143,33 +133,11 @@ const ContactSection = () => {
 
               <div className="relative group">
                 <div 
-                  className="absolute inset-0 rounded-2xl opacity-50 transition-all duration-300"
-                  style={{
-                    background: "linear-gradient(to right, #f97316, #ea580c)",
-                    filter: "blur(8px)",
-                    transform: "scale(1)",
-                    transition: "all 0.3s ease",
-                  }}
+                  className="absolute inset-0 rounded-2xl opacity-50 transition-all duration-300 bg-linear-to-r from-orange-500 to-orange-600 blur-lg"
                 />
                 <button
                   onClick={handleEmailClick}
-                  className="relative flex items-center gap-2 px-8 py-4 rounded-2xl bg-black text-white transition-all duration-300"
-                  style={{
-                    transform: "scale(1)",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    const button = e.currentTarget;
-                    const glow = button.previousElementSibling;
-                    button.style.transform = "scale(1.05)";
-                    glow.style.filter = "blur(12px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    const button = e.currentTarget;
-                    const glow = button.previousElementSibling;
-                    button.style.transform = "scale(1)";
-                    glow.style.filter = "blur(8px)";
-                  }}
+                  className="relative flex items-center gap-2 px-8 py-4 rounded-2xl bg-black text-white transition-all duration-300 hover:scale-105"
                 >
                   <span className="font-medium">Contact Me</span>
                   <ArrowUpRight className="w-5 h-5" />
@@ -178,17 +146,6 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-          }
-          @keyframes gradientMove {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-          }
-        `}</style>
       </div>
     </div>
   );

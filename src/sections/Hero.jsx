@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronDown, ExternalLink, FileText } from "lucide-react"
+import { ChevronDown, ExternalLink, FileText, Star, Sparkles } from "lucide-react"
 import { HeroOrbit } from "@/components/HeroOrbit"
 import Link from "next/link"
 
@@ -80,13 +80,13 @@ export const HeroSection = () => {
         </div>
 
         {/* Orbiting Elements */}
+        {/* Removed the large bold star from this orbit */}
         <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
           >
-            {/* Using star.svg */}
-            <div className="size-28 text-orange-300/80">⭐</div>
+            {/* Large star removed - this orbit is now empty */}
           </motion.div>
         </HeroOrbit>
 
@@ -95,16 +95,16 @@ export const HeroSection = () => {
             animate={{ scale: [1, 1.15, 1] }}
             transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
           >
-            <div className="size-12 text-orange-300/70">⭐</div>
+            <Star className="size-12 text-orange-300/70" fill="currentColor" />
           </motion.div>
         </HeroOrbit>
 
         {/* Sparkles */}
         {[
-          { size: 430, rotation: -14, duration: "30s", sparkleSize: 8 },
-          { size: 440, rotation: 79, duration: "32s", sparkleSize: 5 },
-          { size: 530, rotation: 178, duration: "36s", sparkleSize: 10 },
-          { size: 710, rotation: 144, duration: "44s", sparkleSize: 14 },
+          { size: 430, rotation: -14, duration: "30s", sparkleSize: "w-8 h-8" },
+          { size: 440, rotation: 79, duration: "32s", sparkleSize: "w-5 h-5" },
+          { size: 530, rotation: 178, duration: "36s", sparkleSize: "w-10 h-10" },
+          { size: 710, rotation: 144, duration: "44s", sparkleSize: "w-14 h-14" },
         ].map((orbit, index) => (
           <HeroOrbit
             key={index}
@@ -125,16 +125,16 @@ export const HeroSection = () => {
                 rotate: { duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
               }}
             >
-              <div className={`size-${orbit.sparkleSize} text-orange-300/30`}>✨</div>
+              <Sparkles className={`${orbit.sparkleSize} text-orange-300/30`} />
             </motion.div>
           </HeroOrbit>
         ))}
 
         {/* Floating dots */}
         {[
-          { size: 720, rotation: 85, duration: "46s", dotSize: 3 },
-          { size: 520, rotation: -41, duration: "34s", dotSize: 2 },
-          { size: 650, rotation: -5, duration: "42s", dotSize: 2 },
+          { size: 720, rotation: 85, duration: "46s", dotSize: "w-3 h-3" },
+          { size: 520, rotation: -41, duration: "34s", dotSize: "w-2 h-2" },
+          { size: 650, rotation: -5, duration: "42s", dotSize: "w-2 h-2" },
         ].map((orbit, index) => (
           <HeroOrbit
             key={`dot-${index}`}
@@ -144,7 +144,7 @@ export const HeroSection = () => {
             orbitDuration={orbit.duration}
           >
             <motion.div
-              className={`size-${orbit.dotSize} rounded-full bg-orange-300/30`}
+              className={`${orbit.dotSize} rounded-full bg-orange-300/30`}
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.3, 0.7, 0.3],
@@ -161,8 +161,18 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <motion.div className="container md:-mt-32 -mt-10 relative z-10" style={{ y, opacity }}>
+      <motion.div className="container mx-auto px-4 max-w-6xl relative z-10" style={{ y, opacity }}>
         <div className="flex flex-col items-center">
+          {/* Name */}
+          <motion.h1
+            className="font-serif text-5xl md:text-7xl text-center tracking-tight font-bold bg-clip-text text-transparent bg-linear-to-b from-white to-white/70 mb-6"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Anshuman Kumar Singh
+          </motion.h1>
+
           {/* Status Indicator */}
           <motion.div
             className="bg-gray-900/80 backdrop-blur-md border border-gray-800 px-5 py-2 inline-flex items-center gap-4 rounded-full shadow-lg"
@@ -185,9 +195,9 @@ export const HeroSection = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h1 className="font-serif text-4xl md:text-5xl text-center tracking-tight font-bold bg-clip-text text-transparent bg-linear-to-b from-white to-white/70">
+          <h2 className="font-serif text-3xl md:text-4xl text-center tracking-tight font-bold bg-clip-text text-transparent bg-linear-to-b from-white to-white/70">
             Crafting Scalable & Efficient Web Solutions
-          </h1>
+          </h2>
           <p className="mt-7 text-center text-white/70 md:text-base leading-relaxed">
             As a Full-Stack Developer, I build robust, high-performance applications, from backend architecture to seamless UI/UX.  
             Let's collaborate to bring your ideas to life.

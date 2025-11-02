@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
-import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa"
-import { SiJavascript, SiNextdotjs, SiTailwindcss, SiMongodb, SiNestjs, SiPython, SiSocketdotio, SiPrisma, SiRedis, SiMysql } from "react-icons/si"
+import { FaReact, FaNodeJs, FaJava } from "react-icons/fa"
+import { SiJavascript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPython, SiSocketdotio, SiPrisma, SiRedis, SiMysql } from "react-icons/si"
 
 const toolboxItems = [
   { title: "React", iconType: FaReact, color: "#61DAFB" },
@@ -12,12 +12,12 @@ const toolboxItems = [
   { title: "Tailwind", iconType: SiTailwindcss, color: "#06B6D4" },
   { title: "Node.js", iconType: FaNodeJs, color: "#339933" },
   { title: "Prisma", iconType: SiPrisma, color: "#0C344B" },
-  { title: "NestJs", iconType: SiNestjs, color: "#B81E3E" },
+  { title: "Java", iconType: FaJava, color: "#007396" },
+  { title: "Python", iconType: SiPython, color: "#3776AB" },
   { title: "SocketIo", iconType: SiSocketdotio, color: "#007BFF" },
   { title: "MongoDB", iconType: SiMongodb, color: "#47A248" },
   { title: "Sql", iconType: SiMysql, color: "#336791" },
   { title: "Redis", iconType: SiRedis, color: "#DC382D" },
-  { title: "Docker", iconType: FaDocker, color: "#2496ED" },
 ]
 
 const hobbies = [
@@ -223,7 +223,7 @@ export const AboutSection = () => {
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-orange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-      <div className="container relative z-10">
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <SectionHeader
           eyebrow="About Me"
           title="Crafting Digital Experiences & Beyond"
@@ -235,7 +235,7 @@ export const AboutSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={controls}
-          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
         >
           <motion.div
             className="p-8 rounded-2xl bg-gray-900/40 backdrop-blur-lg border border-orange-500/20 shadow-xl relative overflow-hidden"

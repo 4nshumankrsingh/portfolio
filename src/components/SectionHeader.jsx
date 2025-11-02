@@ -1,8 +1,10 @@
+"use client"
+
 import { motion } from "framer-motion"
 
 export const SectionHeader = ({ title, eyebrow, description }) => {
   return (
-    <div className="max-w-3xl mx-auto text-center">
+    <div className="max-w-3xl mx-auto text-center px-4"> {/* Added px-4 for mobile padding */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +17,7 @@ export const SectionHeader = ({ title, eyebrow, description }) => {
       </motion.div>
 
       <motion.h2
-        className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-linear-to-r from-white to-gray-300"
+        className="text-3xl md:text-4xl font-bold mb-4 text-white text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
@@ -25,7 +27,7 @@ export const SectionHeader = ({ title, eyebrow, description }) => {
       </motion.h2>
 
       <motion.p
-        className="text-gray-300 text-lg"
+        className="text-gray-300 text-lg text-center max-w-2xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
