@@ -13,7 +13,7 @@ const calistoga = Calistoga({
 })
 
 export const metadata = {
-  title: "Anshuman Kumar Singh | Portfolio",
+  title: "Anshuman | Portfolio",
   description: "Full-Stack Developer specializing in Next.js, React, and modern web technologies.",
 }
 
