@@ -22,7 +22,7 @@ const toolboxItems = [
 
 const hobbies = [
   { title: "Sports", emoji: "🏐" },
-  { title: "Movies", emoji: "📽️" },
+  { title: "Cinema", emoji: "📽️" },
   { title: "Reading", emoji: "📚" },
   { title: "Travel", emoji: "✈️" },
   { title: "Foodie", emoji: "🍳" },
