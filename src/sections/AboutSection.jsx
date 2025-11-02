@@ -21,13 +21,13 @@ const toolboxItems = [
 ]
 
 const hobbies = [
-  { title: "Photography", emoji: "📸" },
+  { title: "Sports", emoji: "🏐" },
   { title: "Movies", emoji: "📽️" },
   { title: "Reading", emoji: "📚" },
   { title: "Travel", emoji: "✈️" },
-  { title: "Cooking", emoji: "🍳" },
+  { title: "Foodie", emoji: "🍳" },
   { title: "Gaming", emoji: "🎮" },
-  { title: "Music", emoji: "🎸" },
+  { title: "Music", emoji: "🎧" },
   { title: "Fitness", emoji: "💪" },
 ]
 
