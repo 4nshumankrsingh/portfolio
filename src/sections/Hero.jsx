@@ -80,13 +80,13 @@ export const HeroSection = () => {
         </div>
 
         {/* Orbiting Elements */}
-        {/* Removed the large bold star from this orbit */}
+        
         <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
           >
-            {/* Large star removed - this orbit is now empty */}
+            
           </motion.div>
         </HeroOrbit>
 
@@ -217,7 +217,7 @@ export const HeroSection = () => {
             whileTap={{ scale: 0.98 }}
           >
             <Link 
-              href={"https://drive.google.com/file/d/1kkl_yEYCn_9isPyo43j0aXgLF5APr_Ix/view?usp=sharing"} 
+              href={"https://drive.google.com/file/d/1iUKvJoqU_VnHaU-Lne7ZD7-hKcjXGnCC/view?usp=sharing"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3"
