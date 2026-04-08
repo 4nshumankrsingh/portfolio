@@ -217,7 +217,7 @@ export const HeroSection = () => {
             whileTap={{ scale: 0.98 }}
           >
             <Link 
-              href={"https://drive.google.com/file/d/1iUKvJoqU_VnHaU-Lne7ZD7-hKcjXGnCC/view?usp=sharing"} 
+              href={"https://drive.google.com/file/d/1X2RgHPaW5WI_w-iDSFwmNxke2w8Y_5MC/view?usp=drive_link"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3"
